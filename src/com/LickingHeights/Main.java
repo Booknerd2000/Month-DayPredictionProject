@@ -27,6 +27,7 @@ public class Main {
 			j = (k / 100);
 
 			w =(q + (13 * (m + 1) / 5) + k + (k / 4) + (j / 4) - 2 * j) % 7;
+			nurseryRhyme(w);
 			System.out.println(w);
 		}
 
@@ -47,7 +48,30 @@ public class Main {
         return dateY;
     }
     public static void nurseryRhyme (int dateW){
-		switch
+		switch(dateW){
+			case 0:
+				System.out.println("You are Saturday's child works hard for a living");
+				break;
+			case 1:
+				System.out.println("You are the child born on the Sabbath Day,\n" +
+						"that is fair and wise and good in every way");
+				break;
+			case 2:
+				System.out.println("You are Monday's child that is fair of face");
+				break;
+			case 3:
+				System.out.println("You are Tuesday's child that is full of grace");
+				break;
+			case 4:
+				System.out.println("You are Wednesday's child that is full of woe");
+				break;
+			case 5:
+				System.out.println("You are Thursday's child that has far to go");
+				break;
+			case 6:
+				System.out.println("You are Friday's child that is loving and giving");
+				break;
+		}
 	}
 }
 
