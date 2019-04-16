@@ -1,4 +1,6 @@
 package com.LickingHeights;
+import org.omg.Messaging.SYNC_WITH_TRANSPORT;
+
 import java.util.Scanner;
 public class Main {
 
@@ -8,6 +10,9 @@ public class Main {
 		int year, month, day, q, m, k,a;
 
 		while (true) {
+			nurseryRhyme("NurseryRhyme");
+			System.out.println();
+
 			System.out.println("What month were you born?");
 			month = keyboard.nextInt();
 			m = month;
@@ -22,12 +27,22 @@ public class Main {
 
 			a = equation(m,q,k);
 			System.out.println(a);
-			nurseryRhyme(a);
+			answer(a);
 		}
 
 
 	}
 
+	public static void nurseryRhyme(String title){
+		System.out.println(title +"\n\nMonday's child is fair of face,\n" +
+				"Tuesday's child is full of grace,\n" +
+				"Wednesday's child is full of woe,\n" +
+				"Thursday's child has far to go.\n" +
+				"Friday's child is loving and giving,\n" +
+				"Saturday's child works hard for a living,\n" +
+				"But the child born on the Sabbath Day,\n" +
+				"Is fair and wise and good in every way.");
+	}
 	public static int equation(int m , int q, int k){
 		int j;
 		int w;
@@ -52,7 +67,7 @@ public class Main {
         }
         return dateY;
     }
-    public static void nurseryRhyme (int dateW){
+    public static void answer(int dateW){
 		switch(dateW){
 			case 0:
 				System.out.println("You are Saturday's child works hard for a living");
