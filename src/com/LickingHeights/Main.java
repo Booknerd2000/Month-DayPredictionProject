@@ -10,18 +10,19 @@ public class Main {
 		int year, month, day, q, m, k,a;
 
 		while (true) {
-			nurseryRhyme("NurseryRhyme");
-			System.out.println();
+			nurseryRhyme("Nursery Rhyme");
 
-			System.out.println("What month were you born?");
+			System.out.println("Find out who you are.");
+
+			System.out.println("Type in the month were you born.");
 			month = keyboard.nextInt();
 			m = month;
 
-			System.out.println("What day were you born?");
+			System.out.println("Type in the day were you born.");
 			day = keyboard.nextInt();
 			q = day;
 
-			System.out.println("What year were you born?");
+			System.out.println("Type in the year were you born.");
 			year = keyboard.nextInt();
 			k = year;
 
@@ -41,7 +42,7 @@ public class Main {
 				"Friday's child is loving and giving,\n" +
 				"Saturday's child works hard for a living,\n" +
 				"But the child born on the Sabbath Day,\n" +
-				"Is fair and wise and good in every way.");
+				"Is fair and wise and good in every way.\n");
 	}
 	public static int equation(int m , int q, int k){
 		int j;
