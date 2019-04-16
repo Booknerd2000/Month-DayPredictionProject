@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner keyboard;
         keyboard = new Scanner(System.in);
-		int year, month, day, j, q, m, k,w;
+		int year, month, day, q, m, k,a;
 
 		while (true) {
 			System.out.println("What month were you born?");
@@ -20,20 +20,25 @@ public class Main {
 			year = keyboard.nextInt();
 			k = year;
 
-			k = birthYear(k,m);
-			m = birthMonth(m);
-
-			k = (k % 100);
-			j = (k / 100);
-
-			w =(q + (13 * (m + 1) / 5) + k + (k / 4) + (j / 4) - 2 * j) % 7;
-			nurseryRhyme(w);
-			System.out.println(w);
+			a = equation(m,q,k);
+			System.out.println(a);
+			nurseryRhyme(a);
 		}
 
 
 	}
 
+	public static int equation(int m , int q, int k){
+		int j;
+		int w;
+		k = birthYear(k,m);
+		m = birthMonth(m);
+
+		k = (k % 100);
+		j = (k / 100);
+		w= (q + (13 * (m + 1) / 5) + k + (k / 4) + (j / 4) - 2 * j) % 7;
+		return w;
+	}
 	public static int birthMonth(int dateM) {
 		if (dateM <= 2) {
 			dateM = dateM + 12;
