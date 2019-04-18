@@ -1,6 +1,7 @@
 package com.LickingHeights;
 import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
+import java.io.Console;
 import java.util.Scanner;
 public class Main {
 
@@ -34,7 +35,8 @@ public class Main {
 	}
 
 	public static void nurseryRhyme(String title){
-		System.out.println(title +"\n\nMonday's child is fair of face,\n" +
+
+		System.out.println("\u001B[32m"+ title +"\n\nMonday's child is fair of face,\n" +
 				"Tuesday's child is full of grace,\n" +
 				"Wednesday's child is full of woe,\n" +
 				"Thursday's child has far to go.\n" +
