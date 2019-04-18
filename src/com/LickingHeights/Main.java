@@ -23,7 +23,9 @@ public class Main {
 			System.out.println("Type in the year were you born.");
 			k = keyboard.nextInt();
 
+
 			a = equation(m,q,k);
+			month(m,q);
 			answer(a);
 			System.out.println(" ");
 		}
@@ -71,7 +73,7 @@ public class Main {
     public static void answer(int dateW){
 		switch(dateW){
 			case 0:
-				System.out.println("You are Saturday's child works hard for a living");
+				System.out.println("You are Saturday's child that works hard for a living");
 				break;
 			case 1:
 				System.out.println("You are the child born on the Sabbath Day,\n" +
@@ -92,6 +94,52 @@ public class Main {
 			case 6:
 				System.out.println("You are Friday's child that is loving and giving");
 				break;
+		}
+	}
+	public static void month(int dateM, int dateD){
+		if (dateD ==29){
+			dateM = 13 ;
+		}
+		switch (dateM){
+			case 1:
+				System.out.println("You were born in January with 31 days");
+				break;
+			case 2:
+				System.out.println("You were born in February with 28 days");
+				break;
+			case 3:
+				System.out.println("You were born in March with 31 days");
+				break;
+			case 4:
+				System.out.println("You were born in April with 30 days");
+				break;
+			case 5:
+				System.out.println("You were born in May with 31 days");
+				break;
+			case 6:
+				System.out.println("You were born in June with 30 days");
+				break;
+			case 7:
+				System.out.println("You were born in July with 31 days");
+				break;
+			case 8:
+				System.out.println("You were born in August with 31 days");
+				break;
+			case 9:
+				System.out.println("You were born in September with 30 days");
+				break;
+			case 10:
+				System.out.println("You were born in October with 31 days");
+				break;
+			case 11:
+				System.out.println("You were born in November with 30 days");
+				break;
+			case 12:
+				System.out.println("You were born in December with 31 days");
+				break;
+			case 13:
+				System.out.println("You were born in February with 29 days");
+
 		}
 	}
 }
