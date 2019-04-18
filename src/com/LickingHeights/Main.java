@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner keyboard;
         keyboard = new Scanner(System.in);
-		int year, month, day, q, m, k,a;
+		int q, m, k,a;
 
 		while (true) {
 			nurseryRhyme("Nursery Rhyme");
@@ -15,20 +15,17 @@ public class Main {
 			System.out.println("Find out who you are.");
 
 			System.out.println("Type in the month were you born.");
-			month = keyboard.nextInt();
-			m = month;
+			m = keyboard.nextInt();
 
 			System.out.println("Type in the day were you born.");
-			day = keyboard.nextInt();
-			q = day;
+			q = keyboard.nextInt();
 
 			System.out.println("Type in the year were you born.");
-			year = keyboard.nextInt();
-			k = year;
+			k = keyboard.nextInt();
 
 			a = equation(m,q,k);
-			System.out.println(a);
 			answer(a);
+			System.out.println(" ");
 		}
 
 
@@ -45,14 +42,17 @@ public class Main {
 				"Is fair and wise and good in every way.\n");
 	}
 	public static int equation(int m , int q, int k){
-		int j;
+		int j, modYear;
 		int w;
 		k = birthYear(k,m);
-		m = birthMonth(m);
 
-		k = (k % 100);
+		m = birthMonth(m);
+		//System.out.println(m);
+		modYear = (k % 100);
+		//System.out.println(modYear);
 		j = (k / 100);
-		w= (q + (13 * (m + 1) / 5) + k + (k / 4) + (j / 4) - 2 * j) % 7;
+		//System.out.println(j);
+		w= (q + ((13 * (m + 1)) / 5) + modYear + (modYear / 4) + (j / 4) + 5 * j) % 7;
 		return w;
 	}
 	public static int birthMonth(int dateM) {
@@ -60,7 +60,7 @@ public class Main {
 			dateM = dateM + 12;
 
 		}
-		return dateM;
+		return dateM ;
 	}
 	public static int birthYear(int dateY, int dateM){
 	    if (dateM <=2 ){
