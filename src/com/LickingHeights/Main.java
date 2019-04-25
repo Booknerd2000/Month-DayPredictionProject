@@ -1,7 +1,4 @@
 package com.LickingHeights;
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
-
-import java.io.Console;
 import java.util.Scanner;
 public class Main {
 
@@ -11,9 +8,9 @@ public class Main {
 		int q, m, k,a;
 
 		while (true) {
-			nurseryRhyme("Nursery Rhyme");
+			nurseryRhyme("Nursery Rhyme:");
 
-			System.out.println("Find out who you are.");
+			System.out.println("\033[4;30m"+"Find out who you are.");
 
 			System.out.println("Type in the month were you born.");
 			m = keyboard.nextInt();
@@ -21,7 +18,7 @@ public class Main {
 			System.out.println("Type in the day were you born.");
 			q = keyboard.nextInt();
 
-			System.out.println("Type in the year were you born.");
+			System.out.println("Type in the year were you born."+"\033[0;96m");
 			k = keyboard.nextInt();
 
 
@@ -36,14 +33,14 @@ public class Main {
 
 	public static void nurseryRhyme(String title){
 
-		System.out.println("\u001B[32m"+ title +"\n\nMonday's child is fair of face,\n" +
-				"Tuesday's child is full of grace,\n" +
-				"Wednesday's child is full of woe,\n" +
-				"Thursday's child has far to go.\n" +
-				"Friday's child is loving and giving,\n" +
-				"Saturday's child works hard for a living,\n" +
-				"But the child born on the Sabbath Day,\n" +
-				"Is fair and wise and good in every way.\n");
+		System.out.println("\033[4;30m"+title +"\033[1;31m"+"\n\nMonday's child is fair of face,\n" +
+                "\033[1;32m"+"Tuesday's child is full of grace,\n" +
+                "\033[1;33m"+"Wednesday's child is full of woe,\n" +
+                "\033[1;34m"+"Thursday's child has far to go.\n" +
+                "\033[1;35m"+"Friday's child is loving and giving,\n" +
+                "\033[1;36m"+"Saturday's child works hard for a living,\n" +
+                "\033[1;37m"+"But the child born on the Sabbath Day,\n" +
+				"Is fair and wise and good in every way.\n"+"\u001B[0m");
 	}
 	public static int equation(int m , int q, int k){
 		int j, modYear;
@@ -51,11 +48,11 @@ public class Main {
 		k = birthYear(k,m);
 
 		m = birthMonth(m);
-		//System.out.println(m);
+
 		modYear = (k % 100);
-		//System.out.println(modYear);
+
 		j = (k / 100);
-		//System.out.println(j);
+
 		w= (q + ((13 * (m + 1)) / 5) + modYear + (modYear / 4) + (j / 4) + 5 * j) % 7;
 		return w;
 	}
