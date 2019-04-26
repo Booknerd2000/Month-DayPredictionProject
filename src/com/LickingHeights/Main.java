@@ -25,7 +25,7 @@ public class Main {
 
 
             a = equation(m, q, k);
-            month(m,q,k);
+            month(m,k);
             answer(a);
             System.out.println(" ");
         }
@@ -102,10 +102,7 @@ public class Main {
         }
     }
 
-    public static void month(int dateM, int dateD, int dateY) {
-        if (dateD == 29) {
-            dateM = 13;
-        }
+    public static void month(int dateM, int dateY) {
         switch (dateM) {
             case 1:
                 System.out.println("You were born in the month of January which has 31 days");
@@ -154,8 +151,6 @@ public class Main {
             case 12:
                 System.out.println("You were born in the month of December with 31 days");
                 break;
-            case 13:
-                System.out.println("You were born in the month of February when it had 29 days");
 
         }
     }
